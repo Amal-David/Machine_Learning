@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlib.plot as plt
+import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 import pandas as pd
 cust_df = pd.read_csv("Cust_Segmentation.csv")
@@ -15,11 +15,11 @@ labels = k_means.labels_
 df["Clus_km"] = labels
 df.groupby('Clus_km').mean()
 area = np.pi * ( X[:, 1])**2
-plt.scatter(X[:, 0], X[:, 3], s=area, c=labels.astype(np.float), alpha=0.5)
-plt.xlabel('Age', fontsize=18)
-plt.ylabel('Income', fontsize=16)
+#plt.scatter(X[:, 0], X[:, 3], s=area, c=labels.astype(np.float), alpha=0.5)
+#plt.xlabel('Age', fontsize=18)
+#plt.ylabel('Income', fontsize=16)
 
-plt.show()
+#plt.show()
 
 from mpl_toolkits.mplot3d import Axes3D
 fig = plt.figure(1, figsize=(8, 6))
